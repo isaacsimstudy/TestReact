@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,500&display=swap');
+:root {
+    --clr-dark : black;
+    --clr-white : #fff;
+    --clr-gray : gray;
+    --clr-primary : #ad2c13;    
+    --clr-adoption : #ad2c13;  
+    --clr-release : #ad2c13;  
+    --clr-register : #ad2c13;  
+    --clr-login : #ad2c13;  
+    --clr-home : #ad2c13;  
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    letter-spacing : 0.02em;
+}
+
+body {
+    margin : 0;
+    padding : 0;
+    font-family : Open Sans;
+}
+
+.d-flex {
+    display : flex !important;
+}
+
+.container {
+    max-width : 1080px;
+    padding-inline : 30px;
+    margin : 0 auto;
+}
+
+.nav {
+    background : var(--clr-primary);
+}
+
+.nav-list {
+    display : flex;
+    gap : 1em;
+    list-style: none;
+    padding-inline-start: 0 !important;
+    padding-block : 10px; 
+    background: var(--clr-primary);
+    margin : 0 !important;
+}
+
+.nav-list-item:nth-child(2) {
+    margin-left : auto;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: var(--clr-white);
+    font-weight : 600;
+}
+
+
+/* Adoption Form */
+.adopt-form,
+.register-form,
+.release-form,
+.login-form {
+    flex-direction : column;
+    gap : 0.5rem;
+    /* background : var(--clr-primary); */
+    /* color : var(--clr-white); */
+    /* padding : 20px; */
+    font-weight : 700;
+    font-size : 1rem;
+}
+
+.adopt-form > input,
+.adopt-form > select,
+.register-form > input,
+.release-form > input,
+.login-form > input {
+    width : 50%;
+    padding : 10px;
+}
+
+button {
+    cursor : pointer;
+}
+
+img {
+    width : 100%;
+    height : 100%;
+}
+
+.adopt-form-btn,
+.register-form-btn,
+.login-form-btn {
+    width : fit-content;
+    border-radius : 25px;
+    border : 1px solid var(--clr-gray);
+    background : var(--clr-primary);
+    color : var(--clr-white);
+    font-weight : 700;
+    padding : 10px;
+}
+
+.adopt {
+    display : grid;
+    grid-template-columns : 1fr 1fr 1fr;
+    grid-gap : 1em;
+}
+
+.dog-pic {
+    flex-direction : column;
+    /* margin-bottom : 40px; */
+}
+
+.dog-pic > h2 {
+    text-decoration : underline;
+} 
+/* Register */
+.view-password-btn {
+    width : fit-content;
+    border-radius : 25px;
+    border : 1px solid gray;
+    background : var(--clr-dark);
+    color : var(--clr-white);
+    padding : 10px;
+}
+
+:root:has(.adopt-form-heading) {
+    --clr-adoption : var(--clr-dark);
+}
+
+:root:has(.release-form-heading) {
+    --clr-release : var(--clr-dark);
+}
+
+:root:has(.register) {
+    --clr-register : var(--clr-dark);
+}
+:root:has(.login) {
+    --clr-login : var(--clr-dark);
+}
+
+:root:has(.home) {
+    --clr-home : var(--clr-dark);
+}
+
+
+.nav-adoption {
+    background : var(--clr-adoption);
+}
+
+.nav-release {
+    background : var(--clr-release);
+}
+
+.nav-register {
+    background : var(--clr-register);
+}
+
+.nav-login {
+    background : var(--clr-login);
+}
+
+.nav-home {
+    background : var(--clr-home) !important;
+    /* padding : 20px; */
+    /* margin-top : 20px; */
+}
+
